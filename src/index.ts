@@ -8,12 +8,16 @@ import multer from "multer";
 import path from "path";
 import { fileURLToPath } from "url";
 
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cors());
+
 // __dirname ni ESM rejimida aniqlash
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-const app = express();
-const port = process.env.PORT || 3000;
 
 const storage = multer.diskStorage({
   destination: function (_req, _file, callback) {
@@ -34,10 +38,6 @@ const JWT_ACCESS_SECRET_KEY = "your-access-token-key";
 const JWT_REFRESH_SECRET_KEY = "your-refresh-token-key";
 
 const usersFilePath = "./src/users.json";
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors());
 
 // Utility functions
 const readUsersFromFile = async (): Promise<any[]> => {
