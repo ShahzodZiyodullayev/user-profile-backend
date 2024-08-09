@@ -11,15 +11,13 @@ import { fileURLToPath } from "url";
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(
-  cors({
-    origin: "http://user-profile-henna.vercel.app", // Ruxsat berilgan domen
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true,
-  }),
-);
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+app.get("/", (_req, res) => {
+  res.json({ message: "Hello from backend" });
+});
 
 // __dirname ni ESM rejimida aniqlash
 const __filename = fileURLToPath(import.meta.url);
