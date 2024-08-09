@@ -1,0 +1,14 @@
+[
+  {
+    "firstName": "Shahzod",
+    "lastName": "Ziyodullayev",
+    "street": "Bog'ishamol",
+    "country": "Uzbekistan",
+    "city": "Tashkent",
+    "avatar": "./src/api/uploads/avatar.jpg",
+    "bio": "👋 Salom! Men John Doe, dunyoni o'zgartirishga intiluvchi texnologiya va innovatsiyalar ishqibozi. 💼 **Kasbim:** Full-Stack Dasturchi | Open Source hissa qo'shuvchi | Texnologiya mentor 🌐 **Loyihalar:** Mening asosiy e'tiborim - web va mobil ilovalar yaratish. Men har kuni yangi texnologiyalar va dasturlash tillarini o'rganishga intilaman. O'zim yaratgan open source loyihalarim bilan hamjamiyatga yordam berishni yaxshi ko'raman. 🎓 **Ta'lim:** Computer Science bo'yicha magistr darajasiga egaman va ushbu sohada ko'plab kurs va sertifikatlarni tugatganman. ",
+    "userId": "98a1df2e-6b5f-4481-b9da-5ba9f2cf3054",
+    "email": "a@a.a",
+    "password": "qwertyui"
+  }
+]
