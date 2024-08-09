@@ -11,8 +11,6 @@ import { fileURLToPath } from "url";
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
 app.use(
   cors({
     origin: "https://user-profile-henna.vercel.app", // Ruxsat berilgan domen
@@ -20,6 +18,8 @@ app.use(
     credentials: true,
   }),
 );
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // __dirname ni ESM rejimida aniqlash
 const __filename = fileURLToPath(import.meta.url);
