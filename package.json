@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon",
-    "build": "rimraf ./dist && npx tsc",
+    "build": "tsc",
     "start": "npm run build && node dist/index"
   },
   "type": "module",
