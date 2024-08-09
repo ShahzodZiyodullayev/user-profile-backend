@@ -13,7 +13,13 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://user-profile-henna.vercel.app", // Ruxsat berilgan domen
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+  }),
+);
 
 // __dirname ni ESM rejimida aniqlash
 const __filename = fileURLToPath(import.meta.url);
