@@ -11,13 +11,13 @@ import { fileURLToPath } from "url";
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(
-  cors({
-    origin: "https://user-profile-henna.vercel.app", // Ruxsat berilgan domen
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true,
-  }),
-);
+// app.use(
+//   cors({
+//     origin: "https://user-profile-henna.vercel.app", // Ruxsat berilgan domen
+//     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//     credentials: true,
+//   }),
+// );
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
